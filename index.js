@@ -45,7 +45,7 @@ app.post('/api/shorturl', (req, res) => {
     console.log(`${err} \n ${address}`);
     if (!address || err) {
       res.json({
-        'error': 'Invalid Hostname'
+        'error': 'invalid url'
       })
     } else {
       const urlCounts = await urls.countDocuments({})
