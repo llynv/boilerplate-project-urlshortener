@@ -45,7 +45,7 @@ app.post('/api/shorturl', (req, res) => {
     console.log(`${err} \n ${address}`);
     if (!address || err) {
       res.json({
-        'error': 'invalid url'
+        'error': 'Invalid URL'
       })
     } else {
       const urlCounts = await urls.countDocuments({})
